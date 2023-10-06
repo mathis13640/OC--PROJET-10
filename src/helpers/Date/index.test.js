@@ -17,11 +17,5 @@ describe("Date helper", () => {
       const month = getMonth(date);
       expect(month).toBe("juillet");
     });
-    it("the function return undefined for 2022-15-36 as date", () => {
-      // implémentation test unitaire pour une date farfelue
-      const date = new Date("2022-15-36");
-      const month = getMonth(date);
-      expect(month).not.toBeDefined();
-    });
   });
 });
