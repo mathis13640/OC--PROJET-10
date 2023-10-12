@@ -13,12 +13,12 @@ const Slider = () => {
   );
 
   const nextCard = () => {
-    //changement byDateDesc.length par (byDateDesc.length-1) sinon (index+1) dépassera la taille du tableau
+    // Changement byDateDesc.length par (byDateDesc.length-1) sinon (index+1) dépassera la taille du tableau
     setIndex((prevIndex) => (prevIndex < byDateDesc.length - 1 ? prevIndex + 1 : 0));
   };
 
   useEffect(() => {
-    const intervalId = setInterval(nextCard, 5000); // Changer slide toutes les 5 secondes
+    const intervalId = setInterval(nextCard, 5000); // Changer slide toutes les 5 second
     return () => clearInterval(intervalId); // Cleanup on component unmount
   }, [byDateDesc]);
 
@@ -52,6 +52,7 @@ const Slider = () => {
                   type="radio"
                   name="radio-button"
                   checked={radioIdx === index}
+                  readOnly
                 />
               ))}
             </div>
