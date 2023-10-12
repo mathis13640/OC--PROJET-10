@@ -29,14 +29,30 @@ describe("When Form is created", () => {
 describe("When a page is created", () => {
   it("a list of events is displayed", () => {
     // to implement
+    const {container} = render(<Home/>)
+    const listOfEvent = container.querySelector("listOfEvent");
+    expect(listOfEvent).toBeDefined();
   });
   it("a list a people is displayed", () => {
     // to implement
+    render(<Home />);
+    expect(screen.queryByText("Samira")).toBeInTheDocument();
+    expect(screen.queryByText("Jean-baptiste")).toBeInTheDocument();
+    expect(screen.queryByText("Alice")).toBeInTheDocument();
+    expect(screen.queryByText("Luís")).toBeInTheDocument();
+    expect(screen.queryByText("Christine")).toBeInTheDocument();
+    expect(screen.queryByText("Isabelle")).toBeInTheDocument();
   });
   it("a footer is displayed", () => {
     // to implement
+    const {container} = render(<Home />);
+    const footerExist = container.querySelector("footer");
+    expect(footerExist).toBeInTheDocument(); 
   });
   it("an event card, with the last event, is displayed", () => {
     // to implement
+    const {container} = render(<Home/>)
+    const cardTestid = container.querySelector("card-testid");
+    expect(cardTestid).toBeDefined();
   });
 });
