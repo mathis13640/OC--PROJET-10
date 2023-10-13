@@ -28,7 +28,6 @@ const EventCard = ({
   </div>
 );
 
-//Enlever is required à imageSrc et title, mais en ajoutant des valeurs par défaut neutres
 EventCard.propTypes = {
   imageSrc: PropTypes.string,
   imageAlt: PropTypes.string,
@@ -39,8 +38,8 @@ EventCard.propTypes = {
 };
 
 EventCard.defaultProps = {
-  imageSrc: " ", //ajout
-  title: "Nom de l'évènement", //ajout
+  imageSrc: " ",
+  title: "Nom de l'évènement",
   imageAlt: "image",
   small: false,
 };
